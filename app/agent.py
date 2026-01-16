@@ -91,7 +91,7 @@ class FitnessCoachAgent:
             6. injury_prevention - Provides injury prevention advice and safe exercise guidance
 
             COORDINATION RULES:
-            - Use context! If they asked about workouts before, consider that.
+            - Use context from conversation history if available.
             - Can use MULTIPLE tools if needed (e.g., workout + motivation)
             - Use analyze_progress if they mention "progress", "doing", "results", "how am I"
             - Use motivation if they seem discouraged or ask for encouragement
@@ -529,7 +529,7 @@ class FitnessCoachAgent:
                 RECENT CONVERSATION:
                 {conversation_context}
 
-                Chat naturally! Remember what you've talked about before. If they ask for BMI or calories and you have their data, do the math for them."""
+                Chat naturally and be helpful. If they ask for BMI or calories and you have their data, do the math for them. Only reference previous conversations if the history above shows actual messages."""
 
             messages = [
                 {"role": "system", "content": system_prompt},
