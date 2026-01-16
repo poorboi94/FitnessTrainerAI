@@ -12,9 +12,6 @@ ENV/
 *.db
 data/
 
-# Environment variables
-.env
-
 # IDE
 .vscode/
 .idea/
