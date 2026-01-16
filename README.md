@@ -4,22 +4,48 @@
 
 ## How to Run This
 
-### Windows
+**Prerequisites:** Python 3.11+ installed on your machine
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/poorboi94/FitnessTrainerAI.git
+cd FitnessTrainerAI
+```
+
+### 2. Create Virtual Environment
+
+**Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**Mac/Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+**Windows:**
 ```bash
 python run_streamlit.py
 ```
 
-### Mac/Linux
+**Mac/Linux:**
 ```bash
 python3 run_streamlit.py
 ```
 
-First run will:
-1. Install dependencies
-2. Create a `.env` file for your API key (If using default `.env` it will run)
-3. Just run it again and you're good
+The app will open at `http://localhost:8501`
 
-Opens at `http://localhost:8501`
+**Note:** The repository includes a `.env` file with a Groq API key for immediate testing. No additional setup required.
 
 ---
 
@@ -176,14 +202,14 @@ agenticChatbot/
 
 ```
 users (id, username, password, created_at)
-    ↓
-user_profiles (age, weight, height, goals, preferences, etc.)
-    ↓
-conversations (all chat messages for memory)
-    ↓
-workouts (future - structured workout data)
-    ↓
-meals (future - structured meal data)
+  |
+  +-- user_profiles (age, weight, height, goals, preferences, etc.)
+  |
+  +-- conversations (all chat messages for memory)
+  |
+  +-- workouts (future - structured workout data)
+  |
+  +-- meals (future - structured meal data)
 ```
 
 Currently, workouts and meals tables remain unpopulated. All interaction data is stored in the conversations table. Future enhancements could parse LLM responses to populate these tables for structured analytics.

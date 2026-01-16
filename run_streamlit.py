@@ -31,7 +31,7 @@ def main():
         print("Get free API key at: https://console.groq.com")
         sys.exit(0)
     
-    print("\n💾 Initializing database...")
+    print("\nInitializing database...")
     try:
         from app.database import init_db
         init_db()

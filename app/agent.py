@@ -338,10 +338,10 @@ class FitnessCoachAgent:
 
             CALCULATION STEPS:
             1. Calculate BMR using Mifflin-St Jeor:
-                - Men: (10 × weight_kg) + (6.25 × height_cm) - (5 × age) + 5
-                - Women: (10 × weight_kg) + (6.25 × height_cm) - (5 × age) - 161
+                - Men: (10 * weight_kg) + (6.25 * height_cm) - (5 * age) + 5
+                - Women: (10 * weight_kg) + (6.25 * height_cm) - (5 * age) - 161
 
-            2. Calculate TDEE (BMR × activity multiplier):
+            2. Calculate TDEE (BMR * activity multiplier):
                 - Sedentary: 1.2
                 - Light: 1.375
                 - Moderate: 1.55

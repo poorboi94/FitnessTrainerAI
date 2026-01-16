@@ -128,7 +128,7 @@ def auth_view():
     _, col2, _ = st.columns([1, 2, 1])
 
     with col2:
-        st.title("🏋️ Fitness Coach AI")
+        st.title("Fitness Coach AI")
         st.write("Your AI-powered personal trainer")
 
         tab1, tab2 = st.tabs(["Login", "Register"])
